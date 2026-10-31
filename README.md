@@ -1,16 +1,16 @@
-# 🛒 DSCommerce - Plataforma de E-Commerce
-
 <div align="center">
 
-[![Português](https://img.shields.io/badge/Idioma-Portugu%C3%Aas-green.svg)](./README.md)
-[![English](https://img.shields.io/badge/Language-English-blue.svg)](./README.en.md)
-[![Español](https://img.shields.io/badge/Idioma-Espa%C3%B1ol-yellow.svg)](./README.es.md)
+[![Português](https://img.shields.io/badge/Idioma-Portugu%C3%Aas-green.svg)](#)
+[![English](https://img.shields.io/badge/Language-English-blue.svg)](#)
+[![Español](https://img.shields.io/badge/Idioma-Espa%C3%B1ol-yellow.svg)](#)
 
-[![release](https://img.shields.io/badge/release-v1.0.0--beta-blue.svg)](https://github.com/ivanfsilva/ds-commerce/releases)
-[![status](https://img.shields.io/badge/status-em_desenvolvimento-yellow.svg)](https://github.com/ivanfsilva/ds-commerce)
-[![license](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
+[![release](https://img.shields.io/badge/release-v1.0.0--beta-blue.svg)](#)
+[![status](https://img.shields.io/badge/status-em_desenvolvimento-yellow.svg)](#)
+[![license](https://img.shields.io/badge/license-MIT-green.svg)](#)
 
 </div>
+
+# 🛒 DSCommerce - Plataforma de E-Commerce
 
 O **DSCommerce** é uma solução completa de comércio eletrônico (E-Commerce) desenvolvida como parte da formação corporativa backend em Java e Spring Boot. O sistema fornece uma arquitetura escalável e bem delimitada para gerenciar operações de compra e venda online, atendendo desde a navegação pública de produtos até a gestão administrativa de catálogo e fluxo financeiro de pedidos.
 
@@ -23,7 +23,9 @@ O **DSCommerce** resolve a complexidade do fluxo de vendas online separando clar
 ### 💡 Funcionamento Geral do Sistema
 
 1. **Navegação e Carrinho (Público):** Qualquer usuário anônimo pode consultar o catálogo de produtos com paginação e busca por nome, visualizar detalhes dos itens e montar seu carrinho de compras dinâmico (adicionando, alterando quantidades ou removendo produtos).
+
 2. **Checkout e Pedido (Cliente Autenticado):** Ao decidir finalizar a compra, o usuário precisa estar autenticado no sistema. O pedido é registrado com o status inicial de `WAITING_PAYMENT` (Aguardando Pagamento), consolidando o _snapshot_ dos preços dos produtos no momento da transação.
+
 3. **Gestão Administrativa (Admin):** Usuários administradores possuem privilégios para realizar a manutenção completa (CRUD) do cadastro de produtos, categorias e usuários, além de registrar pagamentos e emitir relatórios de vendas por período.
 
 ### 🏛️ Padrões Arquiteturais e Boas Práticas Aplicadas
@@ -335,7 +337,7 @@ classDiagram
 
 ## 🛠️ Tecnologias e Ferramentas
 
-- **Linguagem & Framework:** Java 17 LTS, Spring Boot 3.x, Spring MVC, Spring Security (OAuth2 / JWT)
+- **Linguagem & Framework:** Java 17, Spring Boot 4.1.2, Spring MVC, Spring Security (OAuth2 / JWT)
 - **Build & Gerenciamento:** Apache Maven
 - **Persistência & Banco de Dados:** Jakarta Persistence (JPA), Hibernate, H2 Database (Dev/Testes), PostgreSQL (Produção)
 - **Validação & Testes:** Jakarta Bean Validation, JUnit 5, Mockito
@@ -344,9 +346,9 @@ classDiagram
 <br>
 
 <div align="center">
-  <!-- Linguagem, Framework & Build -->
-  <img src="https://img.shields.io/badge/Java_LTS_17+-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java LTS 17+" />
-  <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" alt="Spring Boot" />
+  <!-- Linguagem & Framework -->
+  <img src="https://img.shields.io/badge/Java_17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java 17" />
+  <img src="https://img.shields.io/badge/Spring_Boot_4.1.2-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" alt="Spring Boot 4.1.2" />
   <img src="https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=spring-security&logoColor=white" alt="Spring Security" />
   <img src="https://img.shields.io/badge/Apache_Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white" alt="Apache Maven" />
   <br>
@@ -355,49 +357,53 @@ classDiagram
   <img src="https://img.shields.io/badge/H2_Database-003B5C?style=for-the-badge&logo=database&logoColor=white" alt="H2 Database" />
   <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
   <br>
-  <!-- Testes & Produtividade -->
-  <img src="https://img.shields.io/badge/JUnit_5-25A162?style=for-the-badge&logo=junit5&logoColor=white" alt="JUnit 5" />
-  <img src="https://img.shields.io/badge/Mockito-C50000?style=for-the-badge&logo=testing-library&logoColor=white" alt="Mockito" />
-  <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman" />
+  <!-- Ferramentas & Design -->
   <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
+  <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
 </div>
 
 ---
 
-## 📂 Estrutura de Pastas
+## 📂 Estrutura de Pastas (Monorepo)
 
 ```text
-dscommerce/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/
-│   │   │       └── devsuperior/
-│   │   │           └── dscommerce/
-│   │   │               ├── controllers/
-│   │   │               │   ├── CategoryController.java
-│   │   │               │   ├── OrderController.java
-│   │   │               │   ├── ProductController.java
-│   │   │               │   └── UserController.java
-│   │   │               ├── dtos/
-│   │   │               ├── entities/
-│   │   │               │   ├── Category.java
-│   │   │               │   ├── Order.java
-│   │   │               │   ├── OrderItem.java
-│   │   │               │   ├── OrderItemPK.java
-│   │   │               │   ├── OrderStatus.java
-│   │   │               │   ├── Payment.java
-│   │   │               │   ├── Product.java
-│   │   │               │   └── User.java
-│   │   │               ├── repositories/
-│   │   │               ├── services/
-│   │   │               └── exceptions/
-│   │   └── resources/
-│   │       ├── application.properties
-│   │       └── import.sql
-│   └── test/
-├── pom.xml
-└── README.md
+ds-commerce/
+├── .gitattributes
+├── .gitignore
+├── README.md
+└── backend/
+    ├── .mvn/
+    ├── src/
+    │   ├── main/
+    │   │   ├── java/
+    │   │   │   └── br/
+    │   │   │       └── com/
+    │   │   │           └── ivanferreira/
+    │   │   │               └── ds_commerce/
+    │   │   │                   ├── controllers/
+    │   │   │                   ├── dtos/
+    │   │   │                   ├── entities/
+    │   │   │                   │   ├── Category.java
+    │   │   │                   │   ├── Order.java
+    │   │   │                   │   ├── OrderItem.java
+    │   │   │                   │   ├── OrderItemPK.java
+    │   │   │                   │   ├── OrderStatus.java
+    │   │   │                   │   ├── Payment.java
+    │   │   │                   │   ├── Product.java
+    │   │   │                   │   └── User.java
+    │   │   │                   ├── repositories/
+    │   │   │                   ├── services/
+    │   │   │                   ├── exceptions/
+    │   │   │                   └── DsCommerceApplication.java
+    │   │   └── resources/
+    │   │       ├── application.properties
+    │   │       └── import.sql
+    │   └── test/
+    ├── HELP.md
+    ├── mvnw
+    ├── mvnw.cmd
+    └── pom.xml
 ```
 
 ---
@@ -406,12 +412,12 @@ dscommerce/
 
 > 💡 **Nota sobre o escopo:** A versão **v1.0.0-beta** consolida o _baseline_ backend (API RESTful) desenvolvido durante o treinamento da **DevSuperior**. A partir da versão **v2.0.0**, todas as _releases_ e evoluções representam **iniciativas 100% pessoais da minha autoria**, criadas para praticar e aprofundar meus conhecimentos em engenharia Full Stack — incluindo a construção de uma interface web dinâmica em React baseada nos protótipos do Figma.
 
-| Versão                                                                                                                                                                                                           | Descrição                                                                                                                                                                                                     |
-| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [![v1.0.0-beta](https://img.shields.io/badge/github-v1.0.0--beta-blue?logo=github)](https://github.com/ivanfsilva/ds-commerce) [![status](https://img.shields.io/badge/status-Em_Desenvolvimento-yellow.svg)](#) | **[Baseline DevSuperior]** Entrega da API RESTful backend completa: CRUDs, validações com Bean Validation, segurança OAuth2/JWT e regras de negócio de pedidos.                                               |
-| [![v2.0.0](https://img.shields.io/badge/v2.0.0-Futuro-gray.svg)](#)                                                                                                                                              | **[Prática Extra Autoral - Front-end React]** Construção da interface Single Page Application (SPA) em **React** consumindo a API backend, cobrindo telas de catálogo, carrinho e checkout baseadas no Figma. |
-| [![v3.0.0](https://img.shields.io/badge/v3.0.0-Futuro-gray.svg)](#)                                                                                                                                              | **[Prática Extra Autoral - Testes & Qualidade]** Ampliação da suíte automatizada de testes com JUnit 5, Mockito e RestAssured, com verificação de cobertura via JaCoCo.                                       |
-| [![v4.0.0](https://img.shields.io/badge/v4.0.0-Futuro-gray.svg)](#)                                                                                                                                              | **[Prática Extra Autoral - Documentação]** Integração e disponibilização de documentação interativa das APIs utilizando OpenAPI 3 / Swagger UI.                                                               |
+| Versão                                                                                                 | Descrição                                                                                                                                                                                                     |
+| :----------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [![v1.0.0-beta](https://img.shields.io/badge/v1.0.0--beta-Em_Desenvolvimento-blue.svg?logo=github)](#) | **[Baseline DevSuperior]** Entrega da API RESTful backend completa em Java 25 e Spring Boot 4.1.1: CRUDs, validações com Bean Validation, segurança OAuth2/JWT e regras de negócio de pedidos.                |
+| [![v2.0.0](https://img.shields.io/badge/v2.0.0-Futuro-gray.svg)](#)                                    | **[Prática Extra Autoral - Front-end React]** Construção da interface Single Page Application (SPA) em **React** consumindo a API backend, cobrindo telas de catálogo, carrinho e checkout baseadas no Figma. |
+| [![v3.0.0](https://img.shields.io/badge/v3.0.0-Futuro-gray.svg)](#)                                    | **[Prática Extra Autoral - Testes & Qualidade]** Ampliação da suíte automatizada de testes com JUnit 5, Mockito e RestAssured, com verificação de cobertura via JaCoCo.                                       |
+| [![v4.0.0](https://img.shields.io/badge/v4.0.0-Futuro-gray.svg)](#)                                    | **[Prática Extra Autoral - Documentação]** Integração e disponibilização de documentação interativa das APIs utilizando OpenAPI 3 / Swagger UI.                                                               |
 
 ---
 
@@ -423,16 +429,16 @@ dscommerce/
    git clone git@github.com:ivanfsilva/ds-commerce.git
    ```
 
-2. **Navegar até a pasta raiz do projeto:**
+2. **Navegar até a pasta do backend:**
 
    ```bash
-   cd ds-commerce
+   cd ds-commerce/backend
    ```
 
-3. **Executar a aplicação via Maven:**
+3. **Executar a aplicação via Maven Wrapper:**
 
    ```bash
-   mvn spring-boot:run
+   ./mvnw spring-boot:run
    ```
 
 4. **Acessar os endpoints da API:**

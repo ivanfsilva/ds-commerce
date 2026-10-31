@@ -1,0 +1,116 @@
+# ==========================================
+# Variáveis de Ambiente e Segredos (CRÍTICO)
+# ==========================================
+.env
+.env.local
+.env.*.local
+*.env
+
+# ==========================================
+# Compilação e Builds (Java / Maven / Gradle)
+# ==========================================
+*.class
+*.jar
+!**/maven-wrapper.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+
+# Pastas de saída de compilação
+bin/
+build/
+out/
+target/
+.gradle/
+!**/src/main/**/target/
+!**/src/test/**/target/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Maven Wrapper e Documentação do Initializr
+**/.mvn/wrapper/maven-wrapper.jar
+HELP.md
+**/HELP.md
+
+# ==========================================
+# Frontend & Node.js (para a pasta frontend/)
+# ==========================================
+node_modules/
+dist/
+.next/
+.nuxt/
+.angular/
+coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ==========================================
+# Configurações de IDEs e Editores
+# ==========================================
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Eclipse / Spring Tool Suite (STS)
+.settings/
+.classpath
+.project
+.metadata/
+.apt_generated
+.factorypath
+.springBeans
+.sts4-cache
+
+# Visual Studio Code
+.vscode/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# ==========================================
+# Docker e Volumes de Dados Locais
+# ==========================================
+postgres-data/
+kafka-data/
+.data/
+
+# ==========================================
+# Análise de Código e Qualidade (Sonar)
+# ==========================================
+.sonarlint/
+.sonar/
+sonarProject.properties
+
+# ==========================================
+# Arquivos do Sistema Operacional
+# ==========================================
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# ==========================================
+# Logs e Arquivos Temporários
+# ==========================================
+*.log
+*.tmp
+*.swp
